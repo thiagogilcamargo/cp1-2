@@ -22,7 +22,7 @@ Os resultados são exibidos em uma página HTML, apresentando os salários origi
 Você pode acessá-lo através deste link:
 https://thiagogilcamargo.github.io/cp1-2/exercicio-salario/index.html
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 HTML
 CSS
 JavaScript
@@ -49,7 +49,7 @@ Ordenar as tarefas por importância (da maior para a menor).
 O projeto está hospedado no GitHub Pages e você pode conferi-lo através deste link: 
 https://thiagogilcamargo.github.io/cp1-2/exercicio-listadetaraefas/index.html
 
-Tecnologias Utilizadas
+Tecnologias Utilizadas:
 HTML
 CSS
 JavaScript
