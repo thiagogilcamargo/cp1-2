@@ -18,7 +18,7 @@ Tecnologias Utilizadas
 HTML
 CSS
 JavaScript
-
+------------------------------------------------------------------------------------------------------------------------------------------
 Exercício de Lista de Tarefas
 
 Descrição
