@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js"></script>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div class="form">
+            <input type="text" id="descricao" placeholder="Descrição">
+            <input type="text" id="autor" placeholder="Autor">
+            <input type="text" id="departamento" placeholder="Departamento">
+            <input type="number" id="importancia" placeholder="Importância" min="1" max="5">
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Autor</th>
+                    <th>Departamento</th>
+                    <th>Importância</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tarefas"></tbody>
+        </table>
+        <button onclick="ordenarPorImportancia()" class="importancia-button">Ordenar por Importância</button>
+    </div>
+</body>
+</html>
