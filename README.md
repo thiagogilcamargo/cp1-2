@@ -17,7 +17,7 @@ Soma os salários filtrados.
 
 Os resultados são exibidos em uma página HTML, apresentando os salários originais, os salários atualizados, os salários superiores a 2500 e a soma dos salários superiores a 2500.
 
-Como Acessar o Projeto
+
 
 Você pode acessá-lo através deste link:
 https://thiagogilcamargo.github.io/cp1-2/exercicio-salario/index.html
@@ -44,7 +44,7 @@ Visualizar todas as tarefas em uma tabela.
 Remover tarefas individualmente.
 Ordenar as tarefas por importância (da maior para a menor).
 
-Como Acessar o Projeto
+
 
 O projeto está hospedado no GitHub Pages e você pode conferi-lo através deste link: 
 https://thiagogilcamargo.github.io/cp1-2/exercicio-listadetaraefas/index.html
