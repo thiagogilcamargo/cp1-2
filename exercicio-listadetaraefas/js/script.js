@@ -94,11 +94,26 @@ document.addEventListener('DOMContentLoaded', function() {
         return 'R$ ' + valor.toFixed(2).replace('.', ',');
     }
 
-    // Função para validar o formato da duração.
+    // Função para validar o formato e a faixa de horários da duração.
     function validarDuracaoFormato(duracao) {
-        const duracaoRegex = /^(\d{1,2}:\d{2}) - (\d{1,2}:\d{2})$/;
-        return duracaoRegex.test(duracao);
+    const duracaoRegex = /^(\d{1,2}):(\d{2}) - (\d{1,2}):(\d{2})$/;
+    if (!duracaoRegex.test(duracao)) {
+        return false;
     }
+
+    const [, startHours, startMinutes, endHours, endMinutes] = duracao.match(duracaoRegex);
+
+    if (
+        parseInt(startHours) < 0 || parseInt(startHours) > 23 ||
+        parseInt(endHours) < 0 || parseInt(endHours) > 23 ||
+        parseInt(startMinutes) < 0 || parseInt(startMinutes) > 59 ||
+        parseInt(endMinutes) < 0 || parseInt(endMinutes) > 59
+    ) {
+        return false;
+    }
+
+    return true;
+}
 
     // Função para formatar a duração.
     function formatarHorario(duracao) {
