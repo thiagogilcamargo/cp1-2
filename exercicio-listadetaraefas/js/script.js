@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tarefas = [];
+    const adicionarBotao = document.getElementById('adicionarBotao');
+    const listaTarefas = document.getElementById('tarefas');
+    const ordenarBotao = document.getElementById('ordenarBotao');
 
-    function adicionarTarefa() {
+    adicionarBotao.addEventListener('click', () => {
         const descricao = document.getElementById('descricao').value;
         const autor = document.getElementById('autor').value;
         const departamento = document.getElementById('departamento').value;
@@ -16,12 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         exibirTarefas();
         limparCampos();
-    }
+    });
 
     function exibirTarefas() {
-        const listaTarefas = document.getElementById('tarefas');
         listaTarefas.innerHTML = '';
-
         tarefas.forEach((tarefa, index) => {
             const row = document.createElement('tr');
             row.innerHTML = `
@@ -29,21 +30,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${tarefa.autor}</td>
                 <td>${tarefa.departamento}</td>
                 <td>${tarefa.importancia}</td>
-                <td><button onclick="removerTarefa(${index})">Remover</button></td>
+                <td><button class="remover-button" data-index="${index}">Remover</button></td>
             `;
             listaTarefas.appendChild(row);
         });
     }
 
-    function removerTarefa(index) {
-        tarefas.splice(index, 1);
-        exibirTarefas();
-    }
+    listaTarefas.addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON' && event.target.classList.contains('remover-button')) {
+            const index = parseInt(event.target.getAttribute('data-index'));
+            tarefas.splice(index, 1);
+            exibirTarefas();
+        }
+    });
 
-    function ordenarPorImportancia() {
+    ordenarBotao.addEventListener('click', () => {
         tarefas.sort((a, b) => b.importancia - a.importancia);
         exibirTarefas();
-    }
+    });
 
     function limparCampos() {
         document.getElementById('descricao').value = '';
@@ -52,13 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('importancia').value = '';
     }
 
-    // Configurar event listeners para botões
-    const adicionarBotao = document.getElementById('adicionarBotao');
-    adicionarBotao.addEventListener('click', adicionarTarefa);
-
-    const ordenarBotao = document.getElementById('ordenarBotao');
-    ordenarBotao.addEventListener('click', ordenarPorImportancia);
-
-    // Inicializa a exibição das tarefas
     exibirTarefas();
 });
