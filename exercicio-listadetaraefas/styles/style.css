@@ -8,7 +8,7 @@ body {
 
 /* Estilos do container principal */
 .container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 50px auto; /* Centraliza verticalmente e deixa espaço nas laterais */
     background-color: #c1b7b7; /* Cor de fundo do container */
     padding: 20px;

@@ -9,13 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const autor = document.getElementById('autor').value;
         const departamento = document.getElementById('departamento').value;
         const importancia = parseInt(document.getElementById('importancia').value);
+        const valor = parseFloat(document.getElementById('valor').value) || null; // Campo valor
+        const duracao = document.getElementById('duracao').value || null; // Campo duração
 
         if (!descricao || !autor || !departamento || isNaN(importancia) || importancia < 1 || importancia > 5) {
             alert('Preencha todos os campos corretamente. A importância deve ser um número de 1 a 5.');
             return;
         }
 
-        tarefas.push({ descricao, autor, departamento, importancia });
+        tarefas.push({ descricao, autor, departamento, importancia, valor, duracao });
 
         exibirTarefas();
         limparCampos();
@@ -30,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${tarefa.autor}</td>
                 <td>${tarefa.departamento}</td>
                 <td>${tarefa.importancia}</td>
+                <td>${tarefa.valor !== null ? tarefa.valor : 'N/A'}</td>
+                <td>${tarefa.duracao !== null ? tarefa.duracao : 'N/A'}</td>
                 <td><button class="remover-button" data-index="${index}">Remover</button></td>
             `;
             listaTarefas.appendChild(row);
@@ -54,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('autor').value = '';
         document.getElementById('departamento').value = '';
         document.getElementById('importancia').value = '';
+        document.getElementById('valor').value = '';
+        document.getElementById('duracao').value = '';
     }
 
     exibirTarefas();
