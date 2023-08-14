@@ -1,6 +1,8 @@
 Exercícios de Prática - cp1-2
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Exercício de Salários
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Descrição
 Este é um exercício que demonstra o uso prático de JavaScript para calcular aumentos de salários, filtrar valores e realizar operações de soma. O projeto utiliza um array de salários como entrada e executa as seguintes etapas:
@@ -18,8 +20,9 @@ Tecnologias Utilizadas
 HTML
 CSS
 JavaScript
-------------------------------------------------------------------------------------------------------------------------------------------
+
 Exercício de Lista de Tarefas
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Descrição
 Este é um projeto que implementa uma lista de tarefas usando HTML, CSS e JavaScript. A aplicação permite aos usuários adicionar, visualizar, remover e ordenar tarefas com base na importância.
