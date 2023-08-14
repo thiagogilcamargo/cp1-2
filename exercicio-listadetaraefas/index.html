@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/script.js"></script>
     <title>Lista de Tarefas</title>
 </head>
 <body>
@@ -15,7 +14,7 @@
             <input type="text" id="autor" placeholder="Autor">
             <input type="text" id="departamento" placeholder="Departamento">
             <input type="number" id="importancia" placeholder="Importância" min="1" max="5">
-            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+            <button id="adicionarBotao">Adicionar Tarefa</button>
         </div>
         <table class="table-list">
             <thead>
@@ -29,7 +28,8 @@
             </thead>
             <tbody id="tarefas"></tbody>
         </table>
-        <button onclick="ordenarPorImportancia()" class="importancia-button">Ordenar por Importância</button>
+        <button id="ordenarBotao" class="importancia-button">Ordenar por Importância</button>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
