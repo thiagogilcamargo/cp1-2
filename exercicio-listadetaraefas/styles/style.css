@@ -8,7 +8,7 @@ body {
 
 /* Estilos do container principal */
 .container {
-    max-width: 800px;
+    max-width: 1250px;
     margin: 50px auto; /* Centraliza verticalmente e deixa espaço nas laterais */
     background-color: #c1b7b7; /* Cor de fundo do container */
     padding: 20px;
@@ -65,7 +65,7 @@ h1 {
     padding-top: 10px;
     font-size: 18px;
     word-wrap: break-word;
-    max-width: 100px; /* Defina um valor adequado para a largura máxima das células */
+    max-width: 130px; /* Defina um valor adequado para a largura máxima das células */
 }
 
 /* Estilos da última célula da tabela */
