@@ -3,7 +3,6 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Cor de fundo de fallback */
   background-image: url("https://i.pinimg.com/originals/21/39/e0/2139e0405ae392726363954e18afa342.jpg");
   background-size: cover; /* Redimensiona a imagem para cobrir todo o fundo */
   background-position: center; /* Centraliza a imagem */
